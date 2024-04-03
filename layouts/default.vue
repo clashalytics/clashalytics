@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import Footer from "~/components/Footer.vue";
+import Navbar from "~/components/Navbar.vue";
+</script>
+
 <template>
   <div>
     <Navbar />
@@ -15,7 +20,3 @@
     color: blue;
   }
 </style>
-<script setup lang="ts">
-import Footer from "~/components/Footer.vue";
-import Navbar from "~/components/Navbar.vue";
-</script>

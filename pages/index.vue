@@ -1,10 +1,3 @@
-<template>
-  <div>
-    <LandingpageHero />
-    <LandingpageFeatures />
-  </div>
-</template>
-
 <script lang="ts">
 import {defineComponent} from 'vue'
 
@@ -17,11 +10,17 @@ export default defineComponent({
 })
 </script>
 
+<template>
+  <div>
+    <LandingpageHero />
+    <LandingpageFeatures />
+  </div>
+</template>
+
 <style scoped>
   body{
     margin: 0;
     box-sizing: border-box;
     border: 0;
   }
-
 </style>
