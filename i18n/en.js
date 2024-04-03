@@ -1,6 +1,8 @@
 export default {
     welcome: 'Welcome',
     selam: 'Selam',
-    home: {title: "Home"},
-    test: 'Test'
+    home: 'Home',
+    test: 'Test',
+
+    zapquake: 'ZapQuake Calculator'
 }
