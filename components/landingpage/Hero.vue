@@ -13,15 +13,13 @@
       </h2>
     </div>
     <ButtonsCtaButton>
-      <template >
         Discover our tools
-      </template>
     </ButtonsCtaButton>
   </div>
 
 </template>
 
-<style scoped>
+<style scoped lang="scss">
   .content{
     margin: 0 300px;
     max-width: 1320px;

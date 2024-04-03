@@ -1,6 +1,7 @@
 export default {
-    welcome: 'Willkommen',
-    selam: 'Selam, du Nutten',
-    home: {title: "Hausieren"},
-    test: 'Testieren'
+    welcome: 'AMTSPRACHE IST DEUTSCH',
+    selam: 'Selam',
+    home: 'Haus',
+    test: 'Test',
+    zapquake: 'KnallBeben Kalkulierer'
 }

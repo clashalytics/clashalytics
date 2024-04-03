@@ -5,12 +5,7 @@ const localePath = useLocalePath();
 </script>
 
 <template>
-  <div>
-    <button @click="setLocale('en')">en</button>
-    <button @click="setLocale('de')">de</button>
-    <p>{{ $t('welcome') }}</p>
-    <NuxtLink :to="localePath('test')">{{ $t('test') }}</NuxtLink>
-  </div>
+
 
 
 
