@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CtaButton from './buttons/CtaIconButton.vue';
+
 </script>
 
 <template>
@@ -11,22 +11,12 @@ import CtaButton from './buttons/CtaIconButton.vue';
         keeping track of your<br>
         upgrade progress
       </h2>
-
     </div>
     <ButtonsCtaButton>
-
       <template >
-        <p>Dies soll der Text sein</p>
+        <p>Discover our tools</p>
       </template>
     </ButtonsCtaButton>
-    <ButtonsCtaIconButton>
-      <template #icon>
-        // Icon
-      </template>
-      <template #text>
-        <p>Dies soll der Text sein</p>
-      </template>
-    </ButtonsCtaIconButton>
   </div>
 
 </template>

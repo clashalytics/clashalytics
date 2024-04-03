@@ -1,16 +1,18 @@
-<script lang="ts">
-import {defineComponent} from 'vue'
-
-export default defineComponent({
-  setup() {
+<script setup lang="ts">
+const { locale, setLocale } = useI18n();
+const localePath = useLocalePath();
 
 
-    return {}
-  }
-})
+
 </script>
 
 <template>
+  <div>
+    <button @click="setLocale('en')">en</button>
+    <button @click="setLocale('de')">de</button>
+    <p>{{ $t('welcome') }}</p>
+    <NuxtLink :to="localePath('test')">{{ $t('test') }}</NuxtLink>
+  </div>
   <div>
     <LandingpageHero />
     <LandingpageFeatures />

@@ -1,3 +1,7 @@
 <template>
-  <p>This is a test header</p>
+  <p>{{ $t('selam') }}</p>
+
+  <div>
+    <NuxtLink :to="localePath('index')">{{ $t('home.title') }}</NuxtLink>
+  </div>
 </template>
