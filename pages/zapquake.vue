@@ -12,7 +12,7 @@ export default defineComponent({
 
 <template>
   <div>
-
+    <ZapquakeContent />
   </div>
 </template>
 

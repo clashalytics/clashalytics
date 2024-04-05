@@ -23,6 +23,8 @@ const localePath = useLocalePath();
         </div>
       </li>
     </ul>
+    <button>Burger Menu</button>
+    <hr>
   </nav>
 </template>
 

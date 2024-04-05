@@ -3,6 +3,7 @@ const localePath = useLocalePath();
 </script>
 
 <template>
+  <hr>
   <footer>
     <div class="footerContainer">
       <div class="brand">
