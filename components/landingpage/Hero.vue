@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="content">
+  <div>
     <div class="header-title">
       <h1 class="h1">ClashAlytics</h1>
       <h2 class="h2">
@@ -20,8 +20,6 @@
 </template>
 
 <style scoped lang="scss">
-  .content{
-    margin: 0 300px;
-    max-width: 1320px;
-  }
+@import "~/assets/scss/_scss-dependencies.scss";
+
 </style>

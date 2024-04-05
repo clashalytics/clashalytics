@@ -7,7 +7,6 @@
     <slot name="heading"/>
     <slot name="text"/>
     <slot name="button"/>
-    <slot name="icon"/>
   </div>
 </template>
 

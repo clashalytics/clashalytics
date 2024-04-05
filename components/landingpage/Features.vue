@@ -1,11 +1,12 @@
 <script setup lang="ts">
+/*import syntax für icons*/
   import MenuIcon from "vue-material-design-icons/Menu.vue"
   import Rocket from "vue-material-design-icons/Rocket.vue"
 </script>
 
 <template>
 
-  <div class="content">
+  <div>
     <LandingpageCardLeft>
       <template #heading>
         <h1 class="h1">
@@ -20,10 +21,6 @@
         <ButtonsCtaButton>
           Try now
         </ButtonsCtaButton>
-      </template>
-      <template #icon>
-        <menu-icon />
-        <rocket />
       </template>
     </LandingpageCardLeft>
 
@@ -41,9 +38,6 @@
           Try now
         </ButtonsCtaButton>
       </template>
-      <template #icon>
-        <menu-icon />
-      </template>
     </LandingpageCardRight>
 
     <LandingpageCardLeft>
@@ -59,10 +53,6 @@
         <ButtonsCtaButton>
           In development
         </ButtonsCtaButton>
-      </template>
-      <template #icon>
-        <menu-icon />
-        <rocket />
       </template>
     </LandingpageCardLeft>
 
@@ -80,10 +70,6 @@
           In development
         </ButtonsCtaButton>
       </template>
-      <template #icon>
-        <menu-icon />
-        <rocket />
-      </template>
     </LandingpageCardRight>
 
     <LandingpageCardLeft>
@@ -99,10 +85,6 @@
         <ButtonsCtaButton>
           In development
         </ButtonsCtaButton>
-      </template>
-      <template #icon>
-        <menu-icon />
-        <rocket />
       </template>
     </LandingpageCardLeft>
 
@@ -120,10 +102,6 @@
           In development
         </ButtonsCtaButton>
       </template>
-      <template #icon>
-        <menu-icon />
-        <rocket />
-      </template>
     </LandingpageCardRight>
   </div>
 
@@ -131,10 +109,5 @@
 
 <style scoped lang="scss">
 @import "~/assets/scss/_scss-dependencies.scss";
-.content{
-  margin: 0 300px;
-  max-width: 1320px;
-}
-
 
 </style>
