@@ -6,7 +6,7 @@ import Navbar from "~/components/Navbar.vue";
 </script>
 
 <template>
-  <div>
+  <div class="d-unset">
     <Navbar/>
   </div>
   <div>
@@ -17,12 +17,9 @@ import Navbar from "~/components/Navbar.vue";
   </div>
 </template>
 
-<style scoped>
-h1 {
-  color: blue;
-}
-
-Navbar{
-
+<style lang="scss" scoped>
+@import "~/assets/scss/_scss-dependencies.scss";
+.d-unset{
+  display: unset;
 }
 </style>

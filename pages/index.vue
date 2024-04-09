@@ -83,6 +83,18 @@ button{
 }
 /* soft borders */
 
+.soft-border-primary{
+
+}
+
+.soft-border-secondary{
+
+}
+
+.soft-border-background{
+
+}
+
 .soft-border-accent{
   border:0;
   box-shadow: -12px -8px 16px 0px #72640A inset, 24px 24px 48px 0px rgba(243, 232, 158, 0.20), 12px 8px 16px 0px #C6AE0D inset;

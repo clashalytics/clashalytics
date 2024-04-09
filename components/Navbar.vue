@@ -6,42 +6,45 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
 </script>
 
 <template>
-  <nav class="container navbar-bar">
-    <div class="navbar-brand-container">
-      <NuxtLink class="no-textdecoration" :to="localePath('index')">
-        <div class="brand-container-logo">
-          <NuxtImg src='~/assets/images/brandLogo.png'/>
-        </div>
-        <div class="brand-container-title">
-          <h6 class="h6 supercell-font">
-            Clash
-            Alytics
-          </h6>
-        </div>
-      </NuxtLink>
-    </div>
-    <div class="navbar-link-container">
-      <NuxtLink class="no-textdecoration" :to="localePath('zapquake')">
-        <h5 class="h5">
-          {{ $t('tools') }}
-        </h5>
-      </NuxtLink>
-      <NuxtLink class="no-textdecoration" :to="localePath('test')">
-        <h5 class="h5">
-          {{ $t('guides') }}
-        </h5>
-      </NuxtLink>
-    </div>
-    <div class="navbar-button-container">
-      <button class="button-menu">
-        <MenuIcon size="32"/>
-      </button>
-    </div>
-  </nav>
+  <div class="fluid-container nav-container background-blurred">
+    <nav class="navbar-bar">
+      <div class="navbar-brand-container">
+        <NuxtLink class="no-textdecoration" :to="localePath('index')">
+          <div class="brand-container-logo">
+            <NuxtImg src='/img/brandLogo.png' height="64"/>
+          </div>
+          <div class="brand-container-title">
+            <h6 class="h6 supercell-font">
+              Clash
+              Alytics
+            </h6>
+          </div>
+        </NuxtLink>
+      </div>
+      <div class="navbar-link-container">
+        <NuxtLink class="no-textdecoration" :to="localePath('zapquake')">
+          <h5 class="h5">
+            {{ $t('tools') }}
+          </h5>
+        </NuxtLink>
+        <NuxtLink class="no-textdecoration" :to="localePath('test')">
+          <h5 class="h5">
+            {{ $t('guides') }}
+          </h5>
+        </NuxtLink>
+      </div>
+      <div class="navbar-button-container">
+        <button id="button-menu">
+          <MenuIcon size="32"/>
+        </button>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 @import "~/assets/scss/_scss-dependencies.scss";
+
 
 .navbar-bar {
   display: flex;
@@ -51,9 +54,23 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
   padding: 16px 0;
 }
 
+.nav-container{
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(180deg, #0F0F1F 0%, rgba(21, 21, 45, 0.00) 100%);
+}
+
+.background-blurred{
+  backdrop-filter: blur(8px);
+}
+
 .navbar-brand-container a {
   display: flex;
   align-items: center;
+  gap: 16px;
 }
 
 .brand-container-logo {
@@ -79,14 +96,18 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
 .navbar-button-container {
   height: 56px;
   width: 56px;
+
 }
 
-.button-menu{
+#button-menu{
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
+  background: $primary-gradient;
+  color: $font;
 }
 
 MenuIcon{
