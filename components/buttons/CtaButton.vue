@@ -11,6 +11,6 @@
 <style scoped lang="scss">
 @import "~/assets/scss/_scss-dependencies.scss";
 button{
-  background-color: $primary;
+
 }
 </style>

@@ -7,5 +7,15 @@ export default defineNuxtConfig({
     vueI18n: "./i18n/i18n.config.ts",
     locales: ["en", "de"],
     defaultLocale: "en"
+  },
+  app: {
+    head: {
+      title: 'ClashAlytics',
+      meta: [
+        { name: 'description', content: 'Clash smart, not hard' }
+      ],
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    }
   }
 })

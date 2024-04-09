@@ -1,22 +1,28 @@
 <script setup lang="ts">
 import Footer from "~/components/Footer.vue";
 import Navbar from "~/components/Navbar.vue";
+
+
 </script>
 
 <template>
   <div>
-    <Navbar />
+    <Navbar/>
   </div>
   <div>
-    <slot />
+    <slot/>
   </div>
   <div>
-    <Footer />
+    <Footer/>
   </div>
 </template>
 
 <style scoped>
-  h1{
-    color: blue;
-  }
+h1 {
+  color: blue;
+}
+
+Navbar{
+
+}
 </style>
