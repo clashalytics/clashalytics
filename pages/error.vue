@@ -3,7 +3,7 @@
 </script>
 
 <template>
-
+  <p>Error 404 Page</p>
 </template>
 
 <style scoped lang="scss">

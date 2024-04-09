@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="content">
+  <div class="container">
     <LandingpageHero/>
     <LandingpageFeatures/>
     <LandingpageAbout/>
@@ -12,8 +12,8 @@
 
 <style scoped lang="scss">
 @import "~/assets/scss/_scss-dependencies.scss";
-//.content{
-//  margin: 0 300px;
-//  max-width: 1320px;
-//}
+.container{
+  //margin: 0 300px;
+  max-width: 1320px;
+}
 </style>

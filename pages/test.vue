@@ -5,8 +5,6 @@ const localePath = useLocalePath();
 export default defineComponent({
   methods: {localePath},
   setup() {
-
-
     return {}
   }
 })

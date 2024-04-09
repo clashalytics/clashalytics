@@ -1,10 +1,17 @@
 <script setup lang="ts">
+const { locale, setLocale } = useI18n();
+const localePath = useLocalePath();
 /*import syntax für icons*/
   import MenuIcon from "vue-material-design-icons/Menu.vue"
   import Rocket from "vue-material-design-icons/Rocket.vue"
 </script>
 
 <template>
+  <hr>
+  <button @click="setLocale('en')">EN</button>
+  <button @click="setLocale('de')">DE</button>
+  <p id="langSwitch">{{ $t('welcome') }}</p>
+  <hr>
 
   <div>
     <LandingpageCardLeft>
@@ -14,8 +21,8 @@
         </h1>
       </template>
       <template #text>
-        <p class="p">Never waste a spell slot again.<br>
-          Always know in advance with the ZapQuake calculator</p>
+        <h2 class="h2">Never waste a spell slot again.<br>
+          Always know in advance with the ZapQuake calculator</h2>
       </template>
       <template #button>
         <ButtonsCtaButton>
@@ -31,7 +38,7 @@
         </h1>
       </template>
       <template #text>
-        <p class="p">Our Upgrade Calculator to work out exactly how many resources you need to max out your TH</p>
+        <h2 class="h2">Our Upgrade Calculator to work out exactly how many resources you need to max out your TH</h2>
       </template>
       <template #button>
         <ButtonsCtaButton>
@@ -47,7 +54,7 @@
         </h1>
       </template>
       <template #text>
-        <p class="p">Player search made easy</p>
+        <h2 class="h2">Player search made easy</h2>
       </template>
       <template #button>
         <ButtonsCtaButton>
@@ -63,7 +70,7 @@
         </h1>
       </template>
       <template #text>
-        <p class="p">Get detailed clan insights in an appealing user interface</p>
+        <h2 class="h2">Get detailed clan insights in an appealing user interface</h2>
       </template>
       <template #button>
         <ButtonsCtaButton>
@@ -79,7 +86,7 @@
         </h1>
       </template>
       <template #text>
-        <p class="p">Get a quick recap of this season´s gold pass rewards</p>
+        <h2 class="h2">Get a quick recap of this season´s gold pass rewards</h2>
       </template>
       <template #button>
         <ButtonsCtaButton>
@@ -95,7 +102,7 @@
         </h1>
       </template>
       <template #text>
-        <p class="p">Oi bruv, when is the next event, where I can grind another broken ass equipment for my heroes?</p>
+        <h2 class="h2">Oi bruv, when is the next event, where I can grind another broken ass equipment for my heroes?</h2>
       </template>
       <template #button>
         <ButtonsCtaButton>
