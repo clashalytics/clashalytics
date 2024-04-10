@@ -126,7 +126,11 @@ button{
   box-shadow: -12px -8px 16px 0px #72640A inset, 24px 24px 48px 0px rgba(243, 232, 158, 0.20), 12px 8px 16px 0px #C6AE0D inset;
 }
 
-/* Animations */
+/********************************************************
+ * ANIMATIONS
+ *******************************************************/
+
+/* God Rays */
 $ray-angle: 100deg;
 
 $stripes: repeating-linear-gradient(
@@ -140,7 +144,7 @@ $stripes: repeating-linear-gradient(
 $rainbow: repeating-linear-gradient(
                 $ray-angle,
                 #412f85 10%,
-                #595191 15%,
+                #7067b4 15%,
                 #412F85FF 20%,
                 #c2a424 25%,
                 #412F85FF 30%
@@ -156,7 +160,7 @@ $rainbow: repeating-linear-gradient(
 }
 
 .jumbo {
-  opacity: .25;
+  opacity: .4;
   z-index: -1;
   position: absolute;
   inset: 0;
@@ -165,9 +169,9 @@ $rainbow: repeating-linear-gradient(
   background-size: 300%, 200%;
   background-position: 50% 50%, 50% 50%;
 
-  filter: blur(10px);
+  filter: blur(16px);
 
-  mask-image: radial-gradient(ellipse at 100% 0%, #494996 30%, transparent 70%);
+  mask-image: radial-gradient(ellipse at 100% 0%, #494996 50%, transparent 70%);
 
   pointer-events: none;
 }
@@ -182,3 +186,48 @@ $rainbow: repeating-linear-gradient(
   background-attachment: fixed;
   mix-blend-mode: lighten;
 }
+
+/* Shimmer */
+
+//$geist-bg : rgb(246, 246, 246);
+//
+//@keyframes shimmer {
+//  0% {
+//    opacity: 0
+//  }
+//
+//  5% {
+//    opacity: 0;
+//    background-position: -50%
+//  }
+//
+//  10% {
+//    opacity: .7
+//  }
+//
+//  15% {
+//    opacity: 0;
+//    background-position: 150%
+//  }
+//
+//  20% {
+//    opacity: 1;
+//    background: $primary-gradient;
+//  }
+//
+//  to {
+//    opacity: 1
+//  }
+//}
+//.shimmer {
+//  background: linear-gradient(112deg,transparent 30%,rgba(var(--geist-foreground-rgb),.1) 40%,rgba(var(--geist-foreground-rgb),.3) 50%,rgba(var(--geist-foreground-rgb),.1) 60%,transparent 80%);
+//  position: absolute;
+//  inset: 0;
+//  z-index: 20;
+//  pointer-events: none;
+//  border-radius: inherit;
+//  background-size: 200% auto;
+//  background-position: 0;
+//  animation: shimmer 3s cubic-bezier(.8,0,.05,1) infinite;
+//  animation-delay: var(--delay);
+//}

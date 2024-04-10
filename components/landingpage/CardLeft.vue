@@ -37,4 +37,7 @@
   }
 }
 
+.feature-item-container:after{
+
+}
 </style>
