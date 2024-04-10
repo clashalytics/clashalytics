@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="hero-content">
+  <div class="hero-content container-md">
     <div class="hero-title">
       <h1 class="h1 supercell-font">ClashAlytics</h1>
       <h2 class="h2">
@@ -23,7 +23,7 @@
 @import "~/assets/scss/_scss-dependencies.scss";
 
 .hero-content{
-  margin: 15rem 0;
+  padding: 15rem 0;
 }
 
 .hero-title{
@@ -34,17 +34,6 @@
   .h2{
     font-weight: $regular;
   }
-}
-
-.button-cta{
-  color: $background;
-  background-color: $accent;
-  padding: $h5-font-size calc($h5-font-size * 2);
-  font-family: Urbanist, sans-serif;
-  font-size: $h5-font-size;
-  font-weight: $semi-bold;
-  border-radius: 64rem;
-
 }
 
 </style>

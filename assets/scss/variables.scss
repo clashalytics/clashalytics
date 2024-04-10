@@ -3,10 +3,16 @@ $secondary: rgba(89, 81, 145, 1) !important;
 $background: rgba(21, 21, 45, 1) !important;
 $accent: rgba(241, 212, 18, 1) !important;
 $accent-dark: rgba(148, 130, 12, 1) !important;
-$font: rgba(246, 246, 246, 1) ;
+$font: rgba(246, 246, 246, 1);
 $font-dark: rgba(168, 168, 168, 1);
+//$success:;
+//$info:;
+//$warning:;
+//$danger:;
+//$light:;
+//$dark:;
 
-$primary-gradient: linear-gradient(180deg, rgba(89, 81, 145, 0.50) 50%, rgba(89, 81, 145, 0.25) 100%);
+$primary-gradient: linear-gradient(180deg, rgba(89, 81, 145, 0.50) 0%, rgba(89, 81, 145, 0.25) 100%);
 
 $h1-font-size: 3.815rem;
 $h2-font-size: 3.052rem;
@@ -33,4 +39,89 @@ $black: 900;
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+  font-family: Urbanist, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: $font;
+  font-weight: 500;
+  margin: 0;
+}
+
+.p .lead {
+  color: $font;
+  font-weight: 300;
+}
+
+.h1 {
+  font-size: $h1-font-size;
+}
+
+.h2 {
+  font-size: $h2-font-size;
+}
+
+.h3 {
+  font-size: $h3-font-size;
+}
+
+.h4 {
+  font-size: $h4-font-size;
+}
+
+.h5 {
+  font-size: $h5-font-size;
+}
+
+.h6 {
+  font-size: $h6-font-size;
+}
+
+.p {
+  font-size: $p-font-size;
+}
+
+.lead {
+  font-size: $lead-font-size;
+}
+
+.supercell-font {
+  font-family: Supercell-Magic, sans-serif;
+}
+
+.no-textdecoration {
+  text-decoration: none;
+}
+
+button{
+  border: 0;
+  cursor: pointer;
+}
+/* soft borders */
+
+.soft-border-primary{
+
+}
+
+.soft-border-secondary{
+
+}
+
+.soft-border-background{
+
+}
+
+.soft-border-accent{
+  border:0;
+  box-shadow: -12px -8px 16px 0px #72640A inset, 24px 24px 48px 0px rgba(243, 232, 158, 0.20), 12px 8px 16px 0px #C6AE0D inset;
 }

@@ -3,13 +3,38 @@
 </script>
 
 <template>
-  <div>
-    <slot name="heading"/>
-    <slot name="text"/>
-    <slot name="button"/>
+  <div class="feature-item-container col-xl-8">
+    <div class="feature-item-text-container">
+      <div class="feature-item-heading supercell-font">
+        <slot name="heading"/>
+      </div>
+      <div class="feature-item-text">
+        <slot name="text"/>
+      </div>
+    </div>
+    <div class="feature-item-button">
+      <slot name="button"/>
+    </div>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "~/assets/scss/_scss-dependencies.scss";
+
+.feature-item-container {
+  border-radius: 64px;
+  border: 3px solid $primary;
+  background: $primary-gradient;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 96px 64px;
+  gap: 64px;
+  .feature-item-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
 
 </style>
