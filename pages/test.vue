@@ -11,15 +11,12 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
-    <p>{{ $t('selam') }}</p>
-
-    <div>
-      <NuxtLink :to="localePath('index')">{{ $t('home.title') }}</NuxtLink>
-    </div>
+  <div class="container-xxl">
+    <h1 class="h1">Testpage Heading</h1>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "~/assets/scss/_scss-dependencies.scss";
 
 </style>

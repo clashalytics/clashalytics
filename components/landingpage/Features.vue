@@ -7,11 +7,7 @@ const localePath = useLocalePath();
 </script>
 
 <template>
-  <hr>
-  <button @click="setLocale('en')">EN</button>
-  <button @click="setLocale('de')">DE</button>
-  <p id="langSwitch">{{ $t('welcome') }}</p>
-  <hr>
+
 
   <div>
     <LandingpageCardLeft>

@@ -27,9 +27,14 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
             {{ $t('tools') }}
           </h5>
         </NuxtLink>
-        <NuxtLink class="no-textdecoration" :to="localePath('test')">
+        <NuxtLink class="no-textdecoration" :to="localePath('guides')">
           <h5 class="h5">
             {{ $t('guides') }}
+          </h5>
+        </NuxtLink>
+        <NuxtLink class="no-textdecoration" :to="localePath('test')">
+          <h5 class="h5">
+            {{ $t('test') }}
           </h5>
         </NuxtLink>
       </div>
@@ -54,7 +59,7 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
   padding: 16px 0;
 }
 
-.nav-container{
+.nav-container {
   display: flex;
   justify-content: center;
   position: sticky;
@@ -63,7 +68,7 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
   background: linear-gradient(180deg, #0F0F1F 0%, rgba(21, 21, 45, 0.00) 100%);
 }
 
-.background-blurred{
+.background-blurred {
   backdrop-filter: blur(8px);
 }
 
@@ -73,9 +78,6 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
   gap: 16px;
 }
 
-.brand-container-logo {
-
-}
 
 .brand-container-title .h6 {
   text-decoration: none;
@@ -87,7 +89,8 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
 .navbar-link-container {
   display: flex;
   gap: 64px;
-  .h5{
+
+  .h5 {
     font-weight: $medium;
 
   }
@@ -99,7 +102,7 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
 
 }
 
-#button-menu{
+#button-menu {
   width: 100%;
   height: 100%;
   display: flex;
@@ -110,7 +113,7 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
   color: $font;
 }
 
-MenuIcon{
+MenuIcon {
   width: 32px;
   height: 32px;
 }
