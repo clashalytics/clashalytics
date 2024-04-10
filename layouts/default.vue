@@ -19,7 +19,9 @@ import Navbar from "~/components/Navbar.vue";
 
 <style lang="scss" scoped>
 @import "~/assets/scss/_scss-dependencies.scss";
-.d-unset{
+
+.d-unset {
   display: unset;
 }
+
 </style>

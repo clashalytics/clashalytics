@@ -125,3 +125,60 @@ button{
   border:0;
   box-shadow: -12px -8px 16px 0px #72640A inset, 24px 24px 48px 0px rgba(243, 232, 158, 0.20), 12px 8px 16px 0px #C6AE0D inset;
 }
+
+/* Animations */
+$ray-angle: 100deg;
+
+$stripes: repeating-linear-gradient(
+                $ray-angle,
+                #15152D 0%,
+                #15152D 7%,
+                transparent 10%,
+                transparent 12%,
+                #15152D 16%
+);
+$rainbow: repeating-linear-gradient(
+                $ray-angle,
+                #412f85 10%,
+                #595191 15%,
+                #412F85FF 20%,
+                #c2a424 25%,
+                #412F85FF 30%
+);
+
+@keyframes jumbo {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+  to {
+    background-position: 350% 50%, 350% 50%;
+  }
+}
+
+.jumbo {
+  opacity: .25;
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+
+  background-image: $stripes, $rainbow;
+  background-size: 300%, 200%;
+  background-position: 50% 50%, 50% 50%;
+
+  filter: blur(10px);
+
+  mask-image: radial-gradient(ellipse at 100% 0%, #494996 30%, transparent 70%);
+
+  pointer-events: none;
+}
+
+.jumbo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: $stripes, $rainbow;
+  background-size: 200%, 100%;
+  animation: jumbo 90s linear infinite;
+  background-attachment: fixed;
+  mix-blend-mode: lighten;
+}

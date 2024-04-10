@@ -7,8 +7,6 @@ import Rocket from "vue-material-design-icons/Rocket.vue"
 </script>
 
 <template>
-
-
   <div class="features-container">
     <LandingpageCardLeft>
       <template #heading>
