@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <div class="jumbo"></div>
+
     <div class="container">
       <LandingpageHero/>
       <LandingpageFeatures/>

@@ -10,6 +10,7 @@ import Navbar from "~/components/Navbar.vue";
     <Navbar/>
   </div>
   <div>
+    <div class="jumbo"></div>
     <slot/>
   </div>
   <div>

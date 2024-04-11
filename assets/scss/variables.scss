@@ -95,6 +95,28 @@ body {
   font-size: $lead-font-size;
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #595191 #15152d;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: thin;
+}
+
+*::-webkit-scrollbar-track {
+  background: #15152d;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #595191;
+  border-radius: 16px !important;
+  border: 4px none #ffffff;
+}
+
 .supercell-font {
   font-family: Supercell-Magic, sans-serif;
 }
@@ -144,9 +166,9 @@ $stripes: repeating-linear-gradient(
 $rainbow: repeating-linear-gradient(
                 $ray-angle,
                 #412f85 10%,
-                #7067b4 15%,
+                #fe44ec 15%,
                 #412F85FF 20%,
-                #c2a424 25%,
+                #f1d412 25%,
                 #412F85FF 30%
 );
 
@@ -169,7 +191,7 @@ $rainbow: repeating-linear-gradient(
   background-size: 300%, 200%;
   background-position: 50% 50%, 50% 50%;
 
-  filter: blur(16px);
+  filter: blur(8px);
 
   mask-image: radial-gradient(ellipse at 100% 0%, #494996 50%, transparent 70%);
 
