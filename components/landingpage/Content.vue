@@ -8,7 +8,7 @@
     <div class="container">
       <LandingpageHero/>
       <LandingpageFeatures/>
-      <LandingpageAbout/>
+<!--      <LandingpageAbout/>-->
     </div>
   </div>
 
@@ -18,5 +18,6 @@
 @import "~/assets/scss/_scss-dependencies.scss";
 .container{
   max-width: 1320px;
+  margin-bottom: 64px;
 }
 </style>

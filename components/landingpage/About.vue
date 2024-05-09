@@ -6,7 +6,7 @@
   <div>
     <div class="about">
       <div class="text">
-        <h2 class="h2">
+        <h2 class="h2 supercell-font">
           About ClashAlytics
         </h2>
         <h4 class="h4">
@@ -15,9 +15,7 @@
         </h4>
       </div>
       <div class="icon">
-
-        // Icon
-
+        <p>Platzhalter Icon</p>
       </div>
     </div>
     <div class="contribution">
@@ -40,5 +38,20 @@
 </template>
 
 <style scoped lang="scss">
+
+.about{
+  display: flex;
+}
+
+.text{
+  width: fit-content;
+  margin-right: 64px;
+}
+
+.icon{
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+}
 
 </style>

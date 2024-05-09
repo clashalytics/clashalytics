@@ -83,7 +83,7 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
   text-decoration: none;
   box-sizing: content-box;
   word-wrap: break-word;
-  width: 81px;
+  width: 7ch;
 }
 
 .navbar-link-container {
