@@ -99,7 +99,6 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
 .navbar-button-container {
   height: 56px;
   width: 56px;
-
 }
 
 #button-menu {

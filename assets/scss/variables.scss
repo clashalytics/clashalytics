@@ -52,6 +52,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.nuxt-icon svg{
+  width: unset;
+  height: unset;
+  margin-bottom: 0;
+}
+
+
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: $font;
   font-weight: 500;
@@ -95,20 +102,23 @@ body {
   font-size: $lead-font-size;
 }
 
+
+
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
-  scrollbar-width: auto;
+  scrollbar-width: none;
   scrollbar-color: #595191 #15152d;
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: thin;
+  width: none;
 }
 
 *::-webkit-scrollbar-track {
-  background: #15152d;
+  //background: #15152d;
+  background: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -184,12 +194,12 @@ $rainbow: repeating-linear-gradient(
 .jumbo {
   opacity: .4;
   z-index: -1;
-  position: absolute;
-  inset: 0;
+  position: fixed;
+  inset: -10%;
 
   background-image: $stripes, $rainbow;
   background-size: 300%, 200%;
-  background-position: 50% 50%, 50% 50%;
+  background-position: -20% -50%, 50% 50%;
 
   filter: blur(8px);
 
