@@ -23,7 +23,7 @@
 
 .feature-item-container {
   border-radius: 64px;
-  border: 3px solid $primary;
+  border: 2px solid $secondary;
   background: $primary-gradient;
   display: flex;
   flex-direction: column;
