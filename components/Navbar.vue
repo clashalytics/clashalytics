@@ -2,12 +2,41 @@
 const {locale, setLocale} = useI18n();
 const localePath = useLocalePath();
 import MenuIcon from "vue-material-design-icons/Menu.vue"
+import CloseIcon from "vue-material-design-icons/Close.vue"
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const triggerButton: HTMLElement | null = document.getElementById("button-menu");
+//   if (triggerButton) {
+//     triggerButton.addEventListener("click", toggleFullscreenMenu);
+//   }
+// });
+
+function toggleFullscreenMenu() {
+  const fullscreenMenu: HTMLElement | null = document.getElementById("fullscreenMenu");
+  const navbarBar: HTMLElement | null = document.getElementById("navbarBar");
+
+  if (fullscreenMenu) {
+    if (fullscreenMenu.style.display === "flex") {
+      // Closing the menu
+      fullscreenMenu.classList.remove("fade-in-menu");
+      fullscreenMenu.classList.add("fade-out-menu")
+      fullscreenMenu.style.display = "none";
+      navbarBar.style.display = "flex"
+    } else {
+      // Opening the menu
+      fullscreenMenu.classList.remove("fade-out-menu");
+      fullscreenMenu.classList.add("fade-in-menu")
+      fullscreenMenu.style.display = "flex";
+      navbarBar.style.display = "none";
+    }
+  }
+}
 
 </script>
 
 <template>
   <div class="fluid-container nav-container background-blurred">
-    <nav class="navbar-bar">
+    <nav class="navbar-bar" id="navbarBar">
       <div class="navbar-brand-container">
         <NuxtLink :to="localePath('index')" class="no-textdecoration">
           <div class="brand-container-logo">
@@ -39,115 +68,134 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
         </NuxtLink>
       </div>
       <div class="navbar-button-container">
-        <button id="button-menu">
+        <button @click="toggleFullscreenMenu()" id="button-menu">
           <MenuIcon size="32"/>
         </button>
       </div>
     </nav>
   </div>
 
+  <div id="fullscreenMenu" class="background-blurred">
 
-  <div id="fullscreen-menu">
-    <div class="menu-grid container">
-
-      <div class="menu-brand-wrapper">
-        <div class="menu-brand supercell-font">
-          <NuxtLink :to="localePath('index')" class="no-textdecoration">
-            <div class="menu-brand-logo">
-              <NuxtImg id="fullscreen-brand-logo" src='/img/brandLogo.png'/>
-            </div>
-            <div class="menu-brand-title ">
-              <h1 class="h1">
-                Clash <br>
-                Alytics
-              </h1>
-            </div>
-          </NuxtLink>
-        </div>
+    <div class="fullscreen-menu-container container">
+      <div class="close-button-container">
+        <button @click="toggleFullscreenMenu()" id="close-button-menu">
+          <CloseIcon size="40"/>
+        </button>
       </div>
 
-      <div class="menu-tools">
-        <h2 class="h2 supercell-font soft-heading-shadow">Tools</h2>
-        <div class="menu-link-divider"></div>
-        <div class="menu-link-wrapper">
-          <NuxtLink :to="localePath('')" class="no-textdecoration">
-            <h5 class="h5">
-              {{ $t('zapquake') }}
-            </h5>
-          </NuxtLink>
-          <NuxtLink :to="localePath('')" class="no-textdecoration">
-            <h5 class="h5">
-              {{ $t('baseupgradetracker') }}
-            </h5>
-          </NuxtLink>
+      <div class="menu-grid">
+
+        <div class="menu-brand-wrapper">
+          <div class="menu-brand supercell-font soft-border-secondary">
+            <NuxtLink :to="localePath('index')" @click="toggleFullscreenMenu()" class="no-textdecoration">
+              <div class="menu-brand-logo">
+                <NuxtImg id="fullscreen-brand-logo" src='/img/brandLogo.png'/>
+              </div>
+              <div class="menu-brand-title ">
+                <h1 class="h1">
+                  Clash <br>
+                  Alytics
+                </h1>
+              </div>
+            </NuxtLink>
+          </div>
         </div>
-      </div>
 
-      <div class="menu-guides">
-        <h2 class="h2 supercell-font soft-heading-shadow">Guides</h2>
-        <div class="menu-link-divider"></div>
-        <div class="menu-link-wrapper">
-          <NuxtLink :to="localePath('')" class="no-textdecoration">
-            <h5 class="h5">
-              {{ $t('toolmanual') }}
-            </h5>
+        <div class="menu-tools">
+          <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
+            <h2 class="h2 supercell-font soft-heading-shadow">
+              {{ $t('tools') }}
+            </h2>
           </NuxtLink>
-          <NuxtLink :to="localePath('')" class="no-textdecoration">
-            <h5 class="h5">
-              {{ $t('upgradepriorityguide') }}
-            </h5>
-          </NuxtLink>
-        </div>
-      </div>
-
-      <div class="menu-about">
-
-        <div class="menu-about-links">
-          <h2 class="h2 supercell-font soft-heading-shadow">About</h2>
           <div class="menu-link-divider"></div>
           <div class="menu-link-wrapper">
-            <NuxtLink :to="localePath('')" class="no-textdecoration">
+            <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
               <h5 class="h5">
-                {{ $t('faq') }}
+                {{ $t('zapquake') }}
               </h5>
             </NuxtLink>
-            <NuxtLink :to="localePath('')" class="no-textdecoration">
+            <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
               <h5 class="h5">
-                {{ $t('imprint') }}
-              </h5>
-            </NuxtLink>
-            <NuxtLink :to="localePath('')" class="no-textdecoration">
-              <h5 class="h5">
-                {{ $t('dataprivacy') }}
+                {{ $t('baseupgradetracker') }}
               </h5>
             </NuxtLink>
           </div>
         </div>
 
-        <div class="menu-about-socials">
+        <div class="menu-guides">
+          <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
+            <h2 class="h2 supercell-font soft-heading-shadow">
+              {{ $t('guides') }}
+            </h2>
+          </NuxtLink>
+          <div class="menu-link-divider"></div>
+          <div class="menu-link-wrapper">
+            <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
+              <h5 class="h5">
+                {{ $t('toolmanual') }}
+              </h5>
+            </NuxtLink>
+            <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
+              <h5 class="h5">
+                {{ $t('upgradepriorityguide') }}
+              </h5>
+            </NuxtLink>
+          </div>
+        </div>
 
-          <div class="menu-about-socials-item">
-            <NuxtLink :to="localePath('')">
-              <nuxt-icon filled name="socials/discord"></nuxt-icon>
+        <div class="menu-about">
+
+          <div class="menu-about-links">
+            <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
+              <h2 class="h2 supercell-font soft-heading-shadow">
+                {{ $t('about') }}
+              </h2>
             </NuxtLink>
-          </div>
-          <div class="menu-about-socials-item">
-            <NuxtLink :to="localePath('')">
-              <nuxt-icon filled name="socials/reddit"></nuxt-icon>
-            </NuxtLink>
-          </div>
-          <div class="menu-about-socials-item">
-            <NuxtLink :to="localePath('')">
-              <nuxt-icon filled name="socials/twitter"></nuxt-icon>
-            </NuxtLink>
+            <div class="menu-link-divider"></div>
+            <div class="menu-link-wrapper">
+              <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
+                <h5 class="h5">
+                  {{ $t('faq') }}
+                </h5>
+              </NuxtLink>
+              <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
+                <h5 class="h5">
+                  {{ $t('imprint') }}
+                </h5>
+              </NuxtLink>
+              <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
+                <h5 class="h5">
+                  {{ $t('dataprivacy') }}
+                </h5>
+              </NuxtLink>
+            </div>
           </div>
 
+          <div class="menu-about-socials">
+
+            <div class="menu-about-socials-item">
+              <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()">
+                <nuxt-icon filled name="socials/discord"></nuxt-icon>
+              </NuxtLink>
+            </div>
+            <div class="menu-about-socials-item">
+              <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()">
+                <nuxt-icon filled name="socials/reddit"></nuxt-icon>
+              </NuxtLink>
+            </div>
+            <div class="menu-about-socials-item">
+              <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()">
+                <nuxt-icon filled name="socials/twitter"></nuxt-icon>
+              </NuxtLink>
+            </div>
+          </div>
         </div>
 
       </div>
     </div>
-  </div>
 
+  </div>
 
 </template>
 
@@ -196,7 +244,6 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
 
   .h5 {
     font-weight: $medium;
-
   }
 }
 
@@ -205,15 +252,25 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
   width: 56px;
 }
 
-#button-menu {
-  width: 100%;
-  height: 100%;
+#button-menu, #close-button-menu {
+  width: 56px;
+  height: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   background: $primary-gradient;
   color: $font;
+  padding: 0;
+}
+
+#close-button-menu{
+  background: none;
+}
+
+#close-button-menu .nuxt-icon svg{
+  width: 32px;
+  height: 32px;
 }
 
 MenuIcon {
@@ -221,8 +278,29 @@ MenuIcon {
   height: 32px;
 }
 
-#fullscreen-menu {
-  height: 80vh;
+#fullscreenMenu {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  transition: .5s;
+
+  background: rgba(13, 12, 33, 0.75);
+}
+
+.fullscreen-menu-container {
+  gap: 64px;
+  padding: 20px 0 10% 0;
+}
+
+.close-button-container{
+  display: flex;
+  justify-content: end;
+  //margin-bottom: 64px;
 }
 
 .menu-grid {
@@ -236,7 +314,7 @@ MenuIcon {
 }
 
 .menu-tools, .menu-guides, .menu-about {
-  background: $primary-gradient;
+  //background: $primary-gradient;
   border-radius: 16px;
 
   display: flex;
@@ -315,13 +393,12 @@ MenuIcon {
 
 .menu-about-socials {
   display: flex;
+  justify-content: center;
   gap: 32px;
-
 }
 
 .menu-about-socials-item{
   filter: drop-shadow(8px 12px 8px rgba(0, 0, 0, 0.50));
 }
-
 
 </style>
