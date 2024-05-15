@@ -33,12 +33,29 @@ $bold: 700;
 $extra-bold: 800;
 $black: 900;
 
+$shimmer-color: rgb(246, 246, 246);
+$shimmer-delay: 2s;
+
+:root{
+  --shimmer-delay: $shimmer-delay;
+}
+
+/******************************************
+ * ----------------------------------------
+ * GLOBAL SETUP
+ * ----------------------------------------
+ ******************************************/
+
 @font-face {
   font-family: 'Supercell-Magic';
   src: url('public/fonts/supercell-magic.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -58,6 +75,11 @@ body {
   margin-bottom: 0;
 }
 
+/******************************************
+ * ----------------------------------------
+ * CUSTOM UTILITY CLASSES
+ * ----------------------------------------
+ ******************************************/
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: $font;
@@ -102,16 +124,11 @@ body {
   font-size: $lead-font-size;
 }
 
-
-
-/* ===== Scrollbar CSS ===== */
-/* Firefox */
 * {
   scrollbar-width: none;
   scrollbar-color: #595191 #15152d;
 }
 
-/* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: none;
 }
@@ -140,7 +157,11 @@ button{
   cursor: pointer;
 }
 
-/* effects */
+/**
+ * ----------------------------------------
+ * Figma effects
+ * ----------------------------------------
+ */
 
 .soft-border-primary{
 
@@ -167,11 +188,29 @@ button{
   text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
 }
 
-/********************************************************
+/******************************************
+ * ----------------------------------------
  * ANIMATIONS
- *******************************************************/
+ * ----------------------------------------
+ ******************************************/
 
-/* God Rays */
+@keyframes hologram {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * god-rays
+ * ----------------------------------------
+ */
 $ray-angle: 100deg;
 
 $stripes: repeating-linear-gradient(
@@ -191,7 +230,7 @@ $rainbow: repeating-linear-gradient(
                 #412F85FF 30%
 );
 
-@keyframes jumbo {
+@keyframes god-rays {
   from {
     background-position: 50% 50%, 50% 50%;
   }
@@ -200,7 +239,7 @@ $rainbow: repeating-linear-gradient(
   }
 }
 
-.jumbo {
+.god-rays {
   opacity: .25;
   z-index: -1;
   position: fixed;
@@ -217,13 +256,13 @@ $rainbow: repeating-linear-gradient(
   pointer-events: none;
 }
 
-.jumbo::after {
+.god-rays::after {
   content: "";
   position: absolute;
   inset: 0;
   background-image: $stripes, $rainbow;
   background-size: 200%, 100%;
-  animation: jumbo 90s linear infinite;
+  animation: god-rays 90s linear infinite;
   background-attachment: fixed;
   mix-blend-mode: lighten;
 }
@@ -264,3 +303,52 @@ $rainbow: repeating-linear-gradient(
   }
 }
 
+/**
+ * ----------------------------------------
+ * shimmer-animation
+ * ----------------------------------------
+ */
+
+.shimmer-animation{
+  @keyframes shimmer {
+    0% {
+      opacity: 0
+    }
+
+    10% {
+      opacity: 0;
+      background-position: -50%
+    }
+
+    20% {
+      opacity: .7
+    }
+
+    30% {
+      opacity: 0;
+      background-position: 150%
+    }
+
+    40% {
+      opacity: 0
+    }
+
+    to {
+      opacity: 0
+    }
+  }
+  .shimmer {
+    background: linear-gradient(112deg,transparent 30%,rgba($shimmer-color,.1) 35%,rgba($shimmer-color,.3) 40%,rgba($shimmer-color,.1) 50%,transparent 60%);
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background-size: 200% 200%;
+    //background-position: 0;
+    background-repeat: no-repeat;
+    animation: shimmer 3s cubic-bezier(.8,0,.05,1) infinite;
+    animation-delay: $shimmer-delay;
+  }
+}

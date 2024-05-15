@@ -87,7 +87,7 @@ function toggleFullscreenMenu() {
       <div class="menu-grid">
 
         <div class="menu-brand-wrapper">
-          <div class="menu-brand supercell-font soft-border-secondary">
+          <div class="menu-brand supercell-font shimmer-animation">
             <NuxtLink :to="localePath('index')" @click="toggleFullscreenMenu()" class="no-textdecoration">
               <div class="menu-brand-logo">
                 <NuxtImg id="fullscreen-brand-logo" src='/img/brandLogo.png'/>
@@ -99,6 +99,7 @@ function toggleFullscreenMenu() {
                 </h1>
               </div>
             </NuxtLink>
+            <div class="shimmer" style="--shimmer-delay: 2s"></div>
           </div>
         </div>
 
@@ -264,11 +265,11 @@ function toggleFullscreenMenu() {
   padding: 0;
 }
 
-#close-button-menu{
+#close-button-menu {
   background: none;
 }
 
-#close-button-menu .nuxt-icon svg{
+#close-button-menu .nuxt-icon svg {
   width: 32px;
   height: 32px;
 }
@@ -297,7 +298,7 @@ MenuIcon {
   padding: 20px 0 10% 0;
 }
 
-.close-button-container{
+.close-button-container {
   display: flex;
   justify-content: end;
   //margin-bottom: 64px;
@@ -340,7 +341,7 @@ MenuIcon {
   width: 100%;
 }
 
-.menu-link-wrapper{
+.menu-link-wrapper {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -351,17 +352,22 @@ MenuIcon {
 }
 
 .menu-brand {
-  background: $primary-gradient;
+  position: relative;
+  background: radial-gradient(circle, rgb(21, 21, 45) 30%, rgb(12, 12, 27) 100%);
   border-radius: 16px;
+  border: 2px solid $secondary;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+
+
 }
 
 .menu-brand-logo {
   display: flex;
   align-items: center;
+  margin-bottom: 16px;
 }
 
 .menu-brand-title {
@@ -397,7 +403,7 @@ MenuIcon {
   gap: 32px;
 }
 
-.menu-about-socials-item{
+.menu-about-socials-item {
   filter: drop-shadow(8px 12px 8px rgba(0, 0, 0, 0.50));
 }
 

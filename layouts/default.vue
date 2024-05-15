@@ -10,7 +10,7 @@ import Navbar from "~/components/Navbar.vue";
     <Navbar/>
   </div>
   <div>
-    <div class="jumbo"></div>
+    <div class="god-rays"></div>
     <slot/>
   </div>
   <div>
@@ -20,8 +20,6 @@ import Navbar from "~/components/Navbar.vue";
 
 <style lang="scss" scoped>
 @import "~/assets/scss/_scss-dependencies.scss";
-
-
 
 .d-unset {
   display: unset;
