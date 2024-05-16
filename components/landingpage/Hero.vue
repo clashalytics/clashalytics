@@ -14,9 +14,11 @@
           upgrade progress
         </h2>
       </div>
-      <ButtonsCtaButton class="button-cta soft-border-accent">
+
+      <ButtonsCtaButtonShimmer class="button-cta soft-border-accent">
         Discover our tools
-      </ButtonsCtaButton>
+      </ButtonsCtaButtonShimmer>
+
     </div>
   </div>
 </template>
@@ -24,16 +26,17 @@
 <style lang="scss" scoped>
 @import "~/assets/scss/_scss-dependencies.scss";
 
-.hero-content{
+.hero-content {
   padding: 15rem 0;
 }
 
-.hero-title{
+.hero-title {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-bottom: 32px;
-  .h2{
+
+  .h2 {
     font-weight: $regular;
   }
 }

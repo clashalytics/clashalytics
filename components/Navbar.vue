@@ -18,16 +18,17 @@ function toggleFullscreenMenu() {
   if (fullscreenMenu) {
     if (fullscreenMenu.style.display === "flex") {
       // Closing the menu
-      fullscreenMenu.classList.remove("fade-in-menu");
+
       fullscreenMenu.classList.add("fade-out-menu")
-      fullscreenMenu.style.display = "none";
+      fullscreenMenu.classList.remove("fade-in-menu");
       navbarBar.style.display = "flex"
+      fullscreenMenu.style.display = "none";
     } else {
       // Opening the menu
-      fullscreenMenu.classList.remove("fade-out-menu");
       fullscreenMenu.classList.add("fade-in-menu")
-      fullscreenMenu.style.display = "flex";
+      fullscreenMenu.classList.remove("fade-out-menu");
       navbarBar.style.display = "none";
+      fullscreenMenu.style.display = "flex";
     }
   }
 }
@@ -43,7 +44,7 @@ function toggleFullscreenMenu() {
             <NuxtImg height="64" src='/img/brandLogo.png'/>
           </div>
           <div class="brand-container-title">
-            <h6 class="h6 supercell-font">
+            <h6 class="h6 supercell-font-ns">
               Clash
               Alytics
             </h6>
@@ -284,7 +285,7 @@ MenuIcon {
   height: 100%;
   width: 100%;
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   top: 0;
   left: 0;
   overflow-y: hidden;
@@ -360,8 +361,6 @@ MenuIcon {
   justify-content: center;
   align-items: center;
   height: 100%;
-
-
 }
 
 .menu-brand-logo {

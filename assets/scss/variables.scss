@@ -146,6 +146,23 @@ body {
 
 .supercell-font {
   font-family: Supercell-Magic, sans-serif;
+  text-shadow: 0px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.supercell-font-ns {
+  font-family: Supercell-Magic, sans-serif;
+}
+
+.heading-shadow{
+  text-shadow: 0px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.ts-md{
+  text-shadow: 0px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.ts-sm{
+  text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .no-textdecoration {
@@ -180,13 +197,6 @@ button{
   box-shadow: -12px -8px 16px 0px #72640A inset, 24px 24px 48px 0px rgba(243, 232, 158, 0.20), 12px 8px 16px 0px #C6AE0D inset;
 }
 
-.heading-shadow{
-  text-shadow: 0px 8px 0px rgba(0, 0, 0, 0.25);
-}
-
-.soft-heading-shadow{
-  text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
-}
 
 /******************************************
  * ----------------------------------------
@@ -274,8 +284,8 @@ $rainbow: repeating-linear-gradient(
  */
 
 .fade-in-menu{
-  -webkit-animation: fade-in-menu 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: fade-in-menu 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: fade-in-menu 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: fade-in-menu 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @-webkit-keyframes fade-in-menu {
@@ -305,40 +315,77 @@ $rainbow: repeating-linear-gradient(
 
 /**
  * ----------------------------------------
+ * animation fade-out-menu
+ * ----------------------------------------
+ */
+
+.fade-out-menu {
+  -webkit-animation: fade-out-menu 0.4s ease-in 0.2s both;
+  animation: fade-out-menu 0.4s ease-in 0.2s both;
+}
+
+@-webkit-keyframes fade-out-menu {
+  0% {
+    -webkit-transform: translateZ(1);
+    transform: translateZ(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(600px);
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+}
+@keyframes fade-out-menu {
+  0% {
+    -webkit-transform: translateZ(1);
+    transform: translateZ(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(600px);
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+}
+
+/**
+ * ----------------------------------------
  * shimmer-animation
  * ----------------------------------------
  */
+
+//  To use this animation, apply the .shimmer-animation class to the element and add
+//  <div class="shimmer" style="--shimmer-delay: 0s"></div>
+//  as a children.
 
 .shimmer-animation{
   @keyframes shimmer {
     0% {
       opacity: 0
     }
-
     10% {
       opacity: 0;
       background-position: -50%
     }
+    15% {
+      opacity: .7;
 
-    20% {
-      opacity: .7
     }
-
-    30% {
+    20% {
       opacity: 0;
       background-position: 150%
     }
-
-    40% {
+    25% {
       opacity: 0
     }
-
     to {
       opacity: 0
     }
   }
+
   .shimmer {
-    background: linear-gradient(112deg,transparent 30%,rgba($shimmer-color,.1) 35%,rgba($shimmer-color,.3) 40%,rgba($shimmer-color,.1) 50%,transparent 60%);
+    background: linear-gradient(112deg,transparent 30%,rgba($shimmer-color,.1) 40%,rgba($shimmer-color,.3) 50%,rgba($shimmer-color,.1) 60%,transparent 80%);
     position: absolute;
     inset: 0;
     z-index: 20;
@@ -348,7 +395,7 @@ $rainbow: repeating-linear-gradient(
     background-size: 200% 200%;
     //background-position: 0;
     background-repeat: no-repeat;
-    animation: shimmer 3s cubic-bezier(.8,0,.05,1) infinite;
+    animation: shimmer 9s cubic-bezier(.8,0,.05,1) infinite;
     animation-delay: $shimmer-delay;
   }
 }
