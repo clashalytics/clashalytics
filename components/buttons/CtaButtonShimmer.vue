@@ -29,6 +29,29 @@
   .shimmer{
     $shimmer-color: $secondary;
   }
+  @keyframes shimmer {
+    0% {
+      opacity: 0
+    }
+    10% {
+      opacity: 0;
+      background-position: -50%
+    }
+    25% {
+      opacity: .7;
+
+    }
+    40% {
+      opacity: 0;
+      background-position: 150%
+    }
+    50% {
+      opacity: 0
+    }
+    to {
+      opacity: 0
+    }
+  }
 }
 
 .inactive-button-cta{

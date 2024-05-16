@@ -23,9 +23,6 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
             <h5 class="h5">
               2024 ⦁ ClashAlytics
             </h5>
-            <h6 class="h6">
-              by Kevin Schevalje
-            </h6>
           </div>
 
           <div class="divider"></div>
