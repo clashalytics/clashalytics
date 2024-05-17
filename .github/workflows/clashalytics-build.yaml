@@ -42,6 +42,13 @@ jobs:
           npm run generate
           npm run dev
 
+      - name: Deploy to IONOS
+        uses: ionos-deploy-now/project-action@v1
+        env:
+          NODE_VERSION: '20'
+        with:
+          node-version: '20.x'
+
 # Please do not touch the following action
       - name: Store deployment content
         uses: ionos-deploy-now/artifact-action@v1
