@@ -54,7 +54,7 @@ function toggleFullscreenMenu() {
       <div class="navbar-link-container">
         <NuxtLink :to="localePath('zapquake')" class="no-textdecoration">
           <h5 class="h5">
-            {{ $t('tools') }}
+            {{ $t('zapquake') }}
           </h5>
         </NuxtLink>
         <NuxtLink :to="localePath('guides')" class="no-textdecoration">

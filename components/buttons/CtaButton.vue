@@ -11,12 +11,12 @@
 <style scoped lang="scss">
 @import "~/assets/scss/_scss-dependencies.scss";
 .button-cta{
-  color: $background;
+  color: $primary;
   background-color: $accent;
   padding: $h5-font-size calc($h5-font-size * 2);
   font-family: Urbanist, sans-serif;
   font-size: $h5-font-size;
-  font-weight: $semi-bold;
+  font-weight: $bold;
   border-radius: 64rem;
 }
 

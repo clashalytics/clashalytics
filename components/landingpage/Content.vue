@@ -5,7 +5,7 @@
 <template>
   <div>
 
-    <div class="container">
+    <div class="container-sm">
       <LandingpageHero/>
       <LandingpageFeatures/>
 <!--      <LandingpageAbout/>-->

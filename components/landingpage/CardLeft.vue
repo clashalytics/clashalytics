@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="feature-item-container col-xl-8">
+  <div class="feature-item-container col-md-8">
     <div class="feature-item-text-container">
       <div class="feature-item-heading supercell-font">
         <slot name="heading"/>

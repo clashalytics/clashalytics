@@ -16,6 +16,10 @@ import Navbar from "~/components/Navbar.vue";
   <div>
     <Footer/>
   </div>
+  <div class="small-screen">
+    <p class="p">Your current screen is too small to display the website properly.</p>
+    <p class="p">Please resize your browser window or try using another device.</p>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -23,6 +27,32 @@ import Navbar from "~/components/Navbar.vue";
 
 .d-unset {
   display: unset;
+}
+
+.small-screen {
+  display: none;
+}
+
+@media screen and (max-width: 350px) {
+  .small-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $background;
+    z-index: 999999;
+    p{
+      padding-inline: 1rem;
+      color: $font;
+      font-weight: $medium;
+    }
+  }
 }
 
 </style>
