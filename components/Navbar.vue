@@ -21,13 +21,13 @@ function toggleFullscreenMenu() {
 
       fullscreenMenu.classList.add("fade-out-menu")
       fullscreenMenu.classList.remove("fade-in-menu");
-      navbarBar.style.display = "flex"
+      navbarBar.style.visibility = "visible"
       fullscreenMenu.style.display = "none";
     } else {
       // Opening the menu
       fullscreenMenu.classList.add("fade-in-menu")
       fullscreenMenu.classList.remove("fade-out-menu");
-      navbarBar.style.display = "none";
+      navbarBar.style.visibility = "hidden";
       fullscreenMenu.style.display = "flex";
     }
   }

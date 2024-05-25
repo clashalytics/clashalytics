@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <h4 class="h4">Structure name</h4>
+  <h2> Name</h2>
 </template>
 
 <style scoped lang="scss">
