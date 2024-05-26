@@ -4,8 +4,7 @@ import Structure from "~/components/zapquake/Item.vue";
 </script>
 
 <template>
-  <div class="item-grid">
-    <h3 class="h3">Structure grid</h3>
+  <div class="zapquake-item-grid">
     <ZapquakeItem />
     <ZapquakeItem />
     <ZapquakeItem />
@@ -22,7 +21,13 @@ import Structure from "~/components/zapquake/Item.vue";
 </template>
 
 <style scoped lang="scss">
-  .item-grid{
-    border: red 1px solid;
+@import "~/assets/scss/_scss-dependencies.scss";
+
+  .zapquake-item-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
   }
 </style>

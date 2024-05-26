@@ -11,7 +11,9 @@ import Navbar from "~/components/Navbar.vue";
   </div>
   <div>
     <div class="god-rays"></div>
-    <slot/>
+    <div class="container-sm">
+      <slot/>
+    </div>
   </div>
   <div>
     <Footer/>
@@ -33,7 +35,7 @@ import Navbar from "~/components/Navbar.vue";
   display: none;
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 319px) {
   .small-screen{
     display: flex;
     flex-direction: column;

@@ -11,7 +11,7 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
 
           <div class="brand">
             <div class="brand-logo">
-              <NuxtImg src='/img/brandLogo.png' height="96"/>
+              <NuxtImg src="img/brandLogo.png" height="96"/>
             </div>
             <h3 class="h3 supercell-font">
               Clash

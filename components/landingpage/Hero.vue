@@ -4,7 +4,6 @@
 
 <template>
   <div class="container-fluid">
-    <div class="jumbo"></div>
     <div class="hero-content container-md">
       <div class="hero-title">
         <h1 class="h1 supercell-font">ClashAlytics</h1>

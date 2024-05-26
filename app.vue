@@ -14,5 +14,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.nuxt-icon svg{
+  width: unset;
+  height: unset;
+  margin-bottom: 0;
+}
 
 </style>

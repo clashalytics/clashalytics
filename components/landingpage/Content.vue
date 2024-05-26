@@ -3,15 +3,8 @@
 </script>
 
 <template>
-  <div>
-
-    <div class="container-sm">
-      <LandingpageHero/>
-      <LandingpageFeatures/>
-<!--      <LandingpageAbout/>-->
-    </div>
-  </div>
-
+  <LandingpageHero/>
+  <LandingpageFeatures/>
 </template>
 
 <style scoped lang="scss">

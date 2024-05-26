@@ -10,5 +10,6 @@
 </template>
 
 <style scoped lang="scss">
+@import "~/assets/scss/_scss-dependencies.scss";
 
 </style>

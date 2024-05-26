@@ -129,9 +129,9 @@ body {
   scrollbar-color: #595191 #15152d;
 }
 
-*::-webkit-scrollbar {
-  width: none;
-}
+//*::-webkit-scrollbar {
+//  width: 8px;
+//}
 
 *::-webkit-scrollbar-track {
   //background: #15152d;
@@ -146,7 +146,7 @@ body {
 
 .supercell-font {
   font-family: Supercell-Magic, sans-serif;
-  text-shadow: 0px 8px 0px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 8px 0 rgba(0, 0, 0, 0.25);
 }
 
 .supercell-font-ns {
@@ -154,15 +154,15 @@ body {
 }
 
 .heading-shadow{
-  text-shadow: 0px 8px 0px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 8px 0 rgba(0, 0, 0, 0.25);
 }
 
 .ts-md{
-  text-shadow: 0px 6px 0px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 6px 0 rgba(0, 0, 0, 0.25);
 }
 
 .ts-sm{
-  text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .no-textdecoration {
@@ -326,8 +326,8 @@ $rainbow: repeating-linear-gradient(
 
 @-webkit-keyframes fade-out-menu {
   0% {
-    -webkit-transform: translateZ(1);
-    transform: translateZ(1);
+    -webkit-transform: translateZ(100px);
+    transform: translateZ(100px);
     opacity: 1;
   }
   100% {
@@ -338,8 +338,8 @@ $rainbow: repeating-linear-gradient(
 }
 @keyframes fade-out-menu {
   0% {
-    -webkit-transform: translateZ(1);
-    transform: translateZ(1);
+    -webkit-transform: translateZ(100px);
+    transform: translateZ(100px);
     opacity: 1;
   }
   100% {
