@@ -8,14 +8,14 @@
       <div class="hero-title">
         <h1 class="h1 supercell-font">ClashAlytics</h1>
         <h2 class="h2">
-          Your reliable tool for<br>
-          keeping track of your<br>
-          upgrade progress
+          {{ $t('landingPage.hero1') }}<br>
+          {{ $t('landingPage.hero2') }}<br>
+          {{ $t('landingPage.hero3') }}
         </h2>
       </div>
 
       <ButtonsCtaButtonShimmer class="button-cta soft-border-accent">
-        Discover our tools
+        {{ $t('landingPage.discoverTools') }}
       </ButtonsCtaButtonShimmer>
 
     </div>

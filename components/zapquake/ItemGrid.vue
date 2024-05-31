@@ -6,17 +6,6 @@ import Structure from "~/components/zapquake/Item.vue";
 <template>
   <div class="zapquake-item-grid">
     <ZapquakeItem />
-    <ZapquakeItem />
-    <ZapquakeItem />
-    <ZapquakeItem />
-    <ZapquakeItem />
-    <ZapquakeItem />
-    <ZapquakeItem />
-    <ZapquakeItem />
-    <ZapquakeItem />
-    <ZapquakeItem />
-    <ZapquakeItem />
-    <ZapquakeItem />
   </div>
 </template>
 

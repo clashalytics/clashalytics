@@ -15,8 +15,7 @@ import Rocket from "vue-material-design-icons/Rocket.vue"
         </h1>
       </template>
       <template #text>
-        <h2 class="h2">Never waste a spell slot again.<br>
-          Always know in advance with the ZapQuake calculator</h2>
+        <h2 class="h2">{{ $t('landingPage.feature1h2') }}</h2>
       </template>
       <template #button>
         <ButtonsCtaButton>

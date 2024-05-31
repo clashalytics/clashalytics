@@ -1,34 +1,71 @@
 <!--suppress CssUnknownTarget -->
 <script setup lang="ts">
 
-const zapLevel = ref(1)
-const earthquakeLevel = ref(1)
+interface Building {
+  name: string
+  maxLevel: number
+  levelImages: string[]
+  levelHps: number[]
+}
 
-const zapLevelText = computed(() => `${zapLevel.value}`)
-const earthquakeLevelText = computed(() => `${earthquakeLevel.value}`)
+const buildings: Building[] = [
+  {
+    name: 'Air Defense',
+    maxLevel: 14,
+    levelImages: [
+      '/img/buildings/defense/air_defense/1.png',
+      '/img/buildings/town_hall_2.png',
+      // ...  additional images of all levels
+    ],
+    levelHps: [800, 850, 900, 950, 1000, 1050, 1100, 1210, 1300, 1400, 1500, 1650, 1750, 1850]
+  },
+  {
+    name: 'Cannon',
+    maxLevel: 14,
+    levelImages: [
+      '/img/buildings/defense/air_defense/1.png',
+      '/img/buildings/town_hall_2.png',
+      // ... additional images of all levels
+    ],
+    levelHps: [800, 850, 900, 950, 1000, 1050, 1100, 1210, 1300, 1400, 1500, 1650, 1750, 1850]
+  }
+]
 
+const buildingLevels = ref(buildings.map(() => 1))
+
+const getBuildingImage = (buildingIndex: number, level: number) => {
+  const building = buildings[buildingIndex]
+  const imageIndex = level - 1
+  return building.levelImages[imageIndex] || ''
+}
+
+const getBuildingHp = (buildingIndex: number, level: number) => {
+  const building = buildings[buildingIndex]
+  const hpIndex = level - 1
+  return building.levelHps[hpIndex] || 0
+}
 </script>
 
 <template>
-  <div class="zapquake-item">
+  <div v-for="(building, index) in buildings" :key="index" class="zapquake-item">
+
     <div class="zapquake-item-title">
-      img
+      <img :src="getBuildingImage(index, buildingLevels[index])" alt="">
       <div class="zapquake-item-title-text">
-        <h5 class="h5">Structure name</h5>
+        <h5 class="h5">{{ building.name }}</h5>
         <div class="zapquake-item-title-details">
-          <h6 class="h6">Level: [value]</h6>
+          <h6 class="h6">Level {{ buildingLevels[index] }}</h6>
           <div class="zapquake-item-title-hp">
             <nuxt-icon filled name="utility/heart" class="zapquake-item-title-heart"></nuxt-icon>
-            <h6 class="h6">[HP value]</h6>
+            <h6 class="h6">{{ getBuildingHp(index, buildingLevels[index]) }}</h6>
           </div>
         </div>
       </div>
     </div>
 
     <div class="zapquake-item-input">
-      <label>Building level:</label>
-      <input type="range" min="1" max="9" v-model="zapLevel">
-      <span>{{ zapLevelText }}</span>
+      <input type="range" :min="1" :max="building.maxLevel" v-model="buildingLevels[index]">
+
     </div>
 
     <div class="zapquake-item-combos-container">
