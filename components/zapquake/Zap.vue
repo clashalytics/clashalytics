@@ -1,5 +1,8 @@
 <script setup lang="ts">
 
+const zapLevel = ref(1)
+const zapLevelText = computed(() => `${zapLevel.value}`)
+
 </script>
 
 <template>
@@ -8,11 +11,11 @@
       <NuxtImg src="/img/spells/zap.png"/>
     </div>
     <div class="spell-level">
-      <span class="range-value"> {{ value }} </span>
+      <span class="range-value"> {{ zapLevelText }} </span>
     </div>
   </div>
   <div class="spell-range-container">
-    <input v-model="value" type="range" id="spellZap" min="1" max="9">
+    <input type="range" min="1" max="9" v-model="zapLevel">
   </div>
 </template>
 

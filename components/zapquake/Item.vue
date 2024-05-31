@@ -1,4 +1,11 @@
+<!--suppress CssUnknownTarget -->
 <script setup lang="ts">
+
+const zapLevel = ref(1)
+const earthquakeLevel = ref(1)
+
+const zapLevelText = computed(() => `${zapLevel.value}`)
+const earthquakeLevelText = computed(() => `${earthquakeLevel.value}`)
 
 </script>
 
@@ -19,7 +26,9 @@
     </div>
 
     <div class="zapquake-item-input">
-      <input type="range" min="1" max="10">
+      <label>Building level:</label>
+      <input type="range" min="1" max="9" v-model="zapLevel">
+      <span>{{ zapLevelText }}</span>
     </div>
 
     <div class="zapquake-item-combos-container">

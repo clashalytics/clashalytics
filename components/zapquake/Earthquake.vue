@@ -1,5 +1,8 @@
 <script setup lang="ts">
 
+const earthquakeLevel = ref(1)
+const earthquakeLevelText = computed(() => `${earthquakeLevel.value}`)
+
 </script>
 
 <template>
@@ -8,11 +11,11 @@
       <NuxtImg src="/img/spells/earthquake.png"/>
     </div>
     <div class="spell-level">
-      <span class="rangeValue"></span>
+      <span class="range-value"> {{ earthquakeLevelText }} </span>
     </div>
   </div>
   <div class="spell-range-container">
-    <input type="range" id="spellEarthquake" min="1" max="9">
+    <input type="range" min="1" max="5" v-model="earthquakeLevel">
   </div>
 </template>
 
