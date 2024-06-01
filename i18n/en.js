@@ -4,6 +4,28 @@ export default {
         "navLink2": "",
         "navLink3": ""
     },
+    "buildings": {
+        "airDefense": "Air Defense",
+        "airSweeper": "Air Sweeper",
+        "archerQueen": "Archer Queen",
+        "archerTower": "Archer Tower",
+        "bombTower": "Bomb Tower",
+        "builderHut": "Builder Hut",
+        "cannon": "Cannon",
+        "eagleArtillery": "Eagle Artillery",
+        "grandWarden": "Grand Warden",
+        "hiddenTesla": "Hidden Tesla",
+        "infernoTower": "Inferno Tower",
+        "monolith": "Monolith",
+        "mortar": "Mortar",
+        "multiArcherTower": "Multi-Archer Tower",
+        "ricochetCannon": "Ricochet Cannon",
+        "royaleChampion": "Royale Champion",
+        "scattershot": "Scattershot",
+        "spellTower": "Spell Tower",
+        "wizardTower": "Wizard Tower",
+        "xbow": "X-Bow"
+    },
     "landingPage": {
 
         "hero1": "Your reliable tool for",
@@ -39,13 +61,7 @@ export default {
 
     },
     "zapquake": {
-        "title": "Zap Quake Calculator",
-        "buildingName": "Structure Name",
-        "buildingLevel": "Level",
-        "buildingHp": "HP",
-        "zapSpell": "Zap Spell",
-        "earthquakeSpell": "Earthquake Spell",
-        "showMore": "Show More"
+
     }
 }
 
