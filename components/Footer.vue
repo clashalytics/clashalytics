@@ -130,6 +130,10 @@ a{
   display: flex;
   align-items: center;
   gap: 32px;
+  .nuxt-icon svg{
+    height: 56px;
+    border-radius: .75rem;
+  }
 }
 
 .disclaimer{
@@ -139,9 +143,6 @@ a{
   }
 }
 
-.nuxt-icon svg{
-  height: 56px;
-  border-radius: .75rem;
-}
+
 
 </style>

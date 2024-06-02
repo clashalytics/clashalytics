@@ -62,7 +62,7 @@ export default {
 
     },
     "zapquake": {
-
+        "showMore": "Show more"
     }
 }
 

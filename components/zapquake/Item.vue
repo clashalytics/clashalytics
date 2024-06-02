@@ -772,11 +772,12 @@ const getBuildingHp = (buildingIndex: number, level: number) => {
     </div>
 
     <div class="zapquake-item-combos-container">
-      <div class="zapquake-item-combo">
-        <div class="zapquake-item-combo-spells">
 
+      <div class="zapquake-item-combo">
+
+        <div class="zapquake-item-combo-spells">
           <div class="zapquake-item-spells-zap">
-            <h5 class="h5 supercell-font-ns">x3</h5>
+            <h5 class="h5">x3</h5>
             <div class="zapquake-item-spells-zap-image-container">
               <NuxtImg src="/img/spells/zap.png"/>
               <div class="zapquake-item-spells-zap-level">
@@ -786,25 +787,30 @@ const getBuildingHp = (buildingIndex: number, level: number) => {
           </div>
 
           <div class="zapquake-item-spells-earthquake">
-            <h5 class="h5 supercell-font-ns">x3</h5>
+            <h5 class="h5">x3</h5>
             <div class="zapquake-item-spells-earthquake-image-container">
               <NuxtImg src="/img/spells/earthquake.png"/>
-              <div class="zapquake-item-spells-zap-level">
+              <div class="zapquake-item-spells-earthquake-level">
                 <h6 class="h6">9</h6>
               </div>
             </div>
           </div>
-
         </div>
 
         <div class="zapquake-item-combo-space">
           <nuxt-icon filled name="utility/flask" class="zapquake-item-spell-icon"></nuxt-icon>
+          <h5 class="h5">[SUM]</h5>
         </div>
+
       </div>
+
     </div>
 
     <div class="zapquake-item-more">
-      show more
+      <button class="show-more">
+        <nuxt-icon filled name="utility/arrow-down" class="zapquake-item-more-icon"></nuxt-icon>
+        {{ $t('zapquake.showMore') }}
+      </button>
     </div>
   </div>
 </template>
@@ -830,7 +836,7 @@ const getBuildingHp = (buildingIndex: number, level: number) => {
     align-self: stretch;
     gap: 16px;
 
-    .zapquake-item-title-image img{
+    .zapquake-item-title-image img {
       width: 64px;
       height: 64px;
     }
@@ -852,7 +858,7 @@ const getBuildingHp = (buildingIndex: number, level: number) => {
       align-items: center;
       gap: 4px;
 
-      .zapquake-item-title-level{
+      .zapquake-item-title-level {
         width: 8ch;
       }
 
@@ -881,15 +887,13 @@ const getBuildingHp = (buildingIndex: number, level: number) => {
     width: 100%;
     padding: 10px 0;
 
-    .slider-thin{
+    .slider-thin {
       -webkit-appearance: none;
       width: 100%;
       height: 20px;
       border-radius: 16px;
       background: $secondary;
       outline: none;
-      -webkit-transition: .2s;
-      transition: background .2s;
     }
 
     .slider-thin::-webkit-slider-thumb {
@@ -908,6 +912,171 @@ const getBuildingHp = (buildingIndex: number, level: number) => {
       border-radius: 16px;
       background: $accent;
       cursor: pointer;
+    }
+  }
+
+  .zapquake-item-combos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 16px;
+
+    .zapquake-item-combo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      .zapquake-item-combo-spells {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        .zapquake-item-spells-zap {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 16px;
+          background: $secondary;
+
+          .h5 {
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+            padding: 4px 0;
+          }
+
+          .zapquake-item-spells-zap-image-container {
+            width: 69px;
+            height: 69px;
+            border-radius: 16px;
+            box-shadow: inset -12px -8px 16px 0px #272152;
+            position: relative;
+
+            img {
+              flex-shrink: 0;
+              width: 64px;
+              height: 64px;
+              border-radius: 16px;
+              border: 3px solid #15152D;
+            }
+
+            .zapquake-item-spells-zap-level {
+              display: flex;
+              width: 24px;
+              height: 24px;
+              justify-content: center;
+              align-items: center;
+              flex-shrink: 0;
+
+              position: absolute;
+              left: 0;
+              bottom: -1px;
+
+              border-radius: 0 8px;
+              border: 3px solid #15152D;
+              background: $primary;
+
+              h6 {
+                font-weight: $semi-bold;
+              }
+            }
+          }
+        }
+
+        .zapquake-item-spells-earthquake {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 16px;
+          background: $secondary;
+
+          .h5 {
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+            padding: 4px 0;
+          }
+
+          .zapquake-item-spells-earthquake-image-container {
+            width: 69px;
+            height: 69px;
+            border-radius: 16px;
+            box-shadow: inset -12px -8px 16px 0px #272152;
+            position: relative;
+
+            img {
+              flex-shrink: 0;
+              width: 64px;
+              height: 64px;
+              border-radius: 16px;
+              border: 3px solid #15152D;
+            }
+
+            .zapquake-item-spells-earthquake-level {
+              display: flex;
+              width: 24px;
+              height: 24px;
+              justify-content: center;
+              align-items: center;
+              flex-shrink: 0;
+
+              position: absolute;
+              left: 0;
+              bottom: -1px;
+
+              border-radius: 0 8px;
+              border: 3px solid #15152D;
+              background: $accent;
+
+              h6 {
+                font-weight: $semi-bold;
+                color: $background;
+              }
+            }
+          }
+        }
+      }
+
+      .zapquake-item-combo-space {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        .zapquake-item-spell-icon {
+          fill: $accent;
+          width: 24px;
+          border-radius: 0;
+          filter: drop-shadow(12px 12px 24px rgba(117, 102, 6, 0.50));
+        }
+      }
+    }
+  }
+
+  .zapquake-item-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      display: flex;
+      padding: 20px 40px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border-radius: 100rem;
+      background: $secondary;
+      color: $font;
+      font-size: $h6-font-size;
+      font-weight: $semi-bold;
+      font-family: inherit;
+
+      .zapquake-item-more-icon{
+        fill: $font;
+        width: 20px;
+      }
     }
   }
 }
