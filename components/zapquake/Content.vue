@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="container">
+  <div class="container zapquake">
     <ZapquakeSpellSelection />
     <ZapquakeItemGrid />
   </div>
@@ -11,5 +11,13 @@
 
 <style scoped lang="scss">
 @import "~/assets/scss/_scss-dependencies.scss";
+
+.zapquake {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
 
 </style>

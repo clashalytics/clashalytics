@@ -892,7 +892,9 @@ const getBuildingHp = (buildingIndex: number, level: number) => {
       width: 100%;
       height: 20px;
       border-radius: 16px;
-      background: $secondary;
+      background: rgba(89, 81, 145, 0.50);
+      box-shadow: -12px -8px 16px 0px #272152 inset, 12px 8px 16px 0px #7f50d3 inset;
+
       outline: none;
     }
 
@@ -1080,6 +1082,5 @@ const getBuildingHp = (buildingIndex: number, level: number) => {
     }
   }
 }
-
 
 </style>

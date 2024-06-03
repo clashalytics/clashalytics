@@ -36,7 +36,7 @@ function toggleFullscreenMenu() {
 </script>
 
 <template>
-  <div class="fluid-container nav-container background-blurred">
+  <div class="fluid-container-sm nav-container background-blurred">
     <nav class="navbar-bar" id="navbarBar">
       <div class="navbar-brand-container">
         <NuxtLink :to="localePath('index')" class="no-textdecoration">
@@ -54,17 +54,17 @@ function toggleFullscreenMenu() {
       <div class="navbar-link-container">
         <NuxtLink :to="localePath('zapquake')" class="no-textdecoration">
           <h5 class="h5">
-            {{ $t('zapquake') }}
+            {{ $t('general.navBarLink1') }}
           </h5>
         </NuxtLink>
         <NuxtLink :to="localePath('guides')" class="no-textdecoration">
           <h5 class="h5">
-            {{ $t('guides') }}
+            {{ $t('general.navBarLink2') }}
           </h5>
         </NuxtLink>
         <NuxtLink :to="localePath('test')" class="no-textdecoration">
           <h5 class="h5">
-            {{ $t('test') }}
+            {{ $t('general.navBarLink3') }}
           </h5>
         </NuxtLink>
       </div>
@@ -107,19 +107,19 @@ function toggleFullscreenMenu() {
         <div class="menu-tools">
           <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
             <h2 class="h2 supercell-font soft-heading-shadow">
-              {{ $t('tools') }}
+              {{ $t('general.navMenuTools') }}
             </h2>
           </NuxtLink>
           <div class="menu-link-divider"></div>
           <div class="menu-link-wrapper">
             <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
               <h5 class="h5">
-                {{ $t('zapquake') }}
+                {{ $t('general.navMenuTools1') }}
               </h5>
             </NuxtLink>
             <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
               <h5 class="h5">
-                {{ $t('baseupgradetracker') }}
+                {{ $t('general.navMenuTools2') }}
               </h5>
             </NuxtLink>
           </div>
@@ -128,19 +128,19 @@ function toggleFullscreenMenu() {
         <div class="menu-guides">
           <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
             <h2 class="h2 supercell-font soft-heading-shadow">
-              {{ $t('guides') }}
+              {{ $t('general.navMenuGuides') }}
             </h2>
           </NuxtLink>
           <div class="menu-link-divider"></div>
           <div class="menu-link-wrapper">
             <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
               <h5 class="h5">
-                {{ $t('toolmanual') }}
+                {{ $t('general.navMenuGuides1') }}
               </h5>
             </NuxtLink>
             <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
               <h5 class="h5">
-                {{ $t('upgradepriorityguide') }}
+                {{ $t('general.navMenuGuides2') }}
               </h5>
             </NuxtLink>
           </div>
@@ -151,24 +151,24 @@ function toggleFullscreenMenu() {
           <div class="menu-about-links">
             <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
               <h2 class="h2 supercell-font soft-heading-shadow">
-                {{ $t('about') }}
+                {{ $t('general.navMenuAbout') }}
               </h2>
             </NuxtLink>
             <div class="menu-link-divider"></div>
             <div class="menu-link-wrapper">
               <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
                 <h5 class="h5">
-                  {{ $t('faq') }}
+                  {{ $t('general.navMenuAbout1') }}
                 </h5>
               </NuxtLink>
               <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
                 <h5 class="h5">
-                  {{ $t('imprint') }}
+                  {{ $t('general.navMenuAbout2') }}
                 </h5>
               </NuxtLink>
               <NuxtLink :to="localePath('')" @click="toggleFullscreenMenu()" class="no-textdecoration">
                 <h5 class="h5">
-                  {{ $t('dataprivacy') }}
+                  {{ $t('general.navMenuAbout3') }}
                 </h5>
               </NuxtLink>
             </div>
@@ -218,7 +218,7 @@ function toggleFullscreenMenu() {
   justify-content: center;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 100000;
   background: linear-gradient(180deg, #0F0F1F 0%, rgba(21, 21, 45, 0.00) 100%);
 }
 

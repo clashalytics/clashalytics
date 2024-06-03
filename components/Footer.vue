@@ -5,7 +5,7 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
 
 <template>
   <footer>
-    <div class="container">
+    <div class="container-sm">
       <div class="footer-content">
         <div class="footer-container">
 
@@ -28,11 +28,11 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
           <div class="divider"></div>
 
           <div class="links">
-            <NuxtLink :to="localePath('tools')">{{ $t('tools') }}</NuxtLink>
-            <NuxtLink :to="localePath('guides')">{{ $t('guides') }}</NuxtLink>
-            <NuxtLink :to="localePath('faq')">{{ $t('faq') }}</NuxtLink>
-            <NuxtLink :to="localePath('imprint')">{{ $t('imprint') }}</NuxtLink>
-            <NuxtLink :to="localePath('dataprivacy')">{{ $t('dataprivacy') }}</NuxtLink>
+            <NuxtLink :to="localePath('tools')">{{ $t('general.footerLink1') }}</NuxtLink>
+            <NuxtLink :to="localePath('guides')">{{ $t('general.footerLink2') }}</NuxtLink>
+            <NuxtLink :to="localePath('faq')">{{ $t('general.footerLink3') }}</NuxtLink>
+            <NuxtLink :to="localePath('imprint')">{{ $t('general.footerLink4') }}</NuxtLink>
+            <NuxtLink :to="localePath('dataprivacy')">{{ $t('general.footerLink5') }}</NuxtLink>
           </div>
 
           <div class="socials">
@@ -48,10 +48,10 @@ import MenuIcon from "vue-material-design-icons/Menu.vue"
           </div>
         </div>
         <div class="disclaimer">
-          <p class="p"> <strong>Disclaimer:</strong> This web site is not affiliated with, endorsed, sponsored, or specifically approved by
-            Supercell. Supercell is not responsible for the operation or content of this site/application. Use of the
-            trademarks and other intellectual property of Supercell is subject to Supercell's Fan Kit Agreement. <br>
-            For more information about Supercell, please visit their website at
+          <p class="p"> <strong>{{ $t('general.footerDisclaimerStrong1')}}</strong>
+            {{ $t('general.footerDisclaimer1')}}
+            <br>
+            {{ $t('general.footerDisclaimer2')}}
             <a href="https://supercell.com/">www.supercell.net</a></p>
         </div>
       </div>
@@ -66,17 +66,13 @@ footer{
   background: linear-gradient(180deg, rgba(21, 21, 45, 0) 0%, #0a071a 100%);
 }
 
-.container {
-  max-width: 1320px;
-  color: $font;
-}
-
 a{
   text-decoration: none;
   color: $font;
 }
 
 .footer-content{
+  color: $font;
   padding-top: 128px;
   padding-bottom: 64px;
 }
